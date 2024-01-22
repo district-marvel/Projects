@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<meta lang="en">
+<link rel="stylesheet" href="shojn.css" type="text/css">
+<link rel="icon" href='images/calcicon.png' type="images/x-icon">
+<link rel="stylesheet" href="fonts/Roboto/Roboto-Light.ttf" type="text/Roboto-Light">
+
+</head>
+<title>Calculator</title>
+<body >
+    <h1 id='TAT' style="margin-left:  440px;">Calculator</h1>
+   
+   
+    <br>
+    <div class="back">
+    <table class="Calc"  >
+       
+        <tr class="scr" >
+    <button  id="screen"  class="screen" style="margin-top: 16px; margin-bottom: 0px;" >
+            
+           
+        </tr>
+        <tr>
+            <th><button class='diff' onclick="calcu('AC')">AC</button></th>
+            <th><button  class='diff' onclick="calcu('X')">X</button></th>
+            <th><button   class='diff' onclick="calcu('@')">@</button></th>
+            <th><button   class='op' onclick="calcu('÷')">÷</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calcu(9)">9</button></th>
+            <th><button onclick="calcu(8)">8</button></th>
+            <th><button onclick="calcu(7)">7</button></th>
+            <th><button  class='op' onclick="calcu('x')">×</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calcu(6)">6</button></th>
+            <th><button onclick="calcu(5)" >5</button></th>
+            <th><button onclick="calcu(4)">4</button></th>
+            <th><button  class='op' onclick="calcu('-')">-</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calcu(3)">3</button></th>
+            <th><button onclick="calcu(2)">2</button></th>
+            <th ><button onclick="calcu(1)">1</button></th>
+            <th><button   class='op'onclick="calcu('+')">+</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="calcu(0)">0</button></th>
+            <th><button onclick="calcu('.')">.</button></th>
+            <th><button id="result" class='op' onclick="calcu('=')">=</button> </th>
+        </tr>
+       
+    </table>
+</div>
+    <script src="calc.js" type="text/javascript"></script></script>
+</body>
+
+
+
+
+
+</html>

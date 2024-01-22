@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Jesse">
+    <meta name="description" content="Trying not to be a loser">
+    <link rel="icon" href="images/paint.png" type="image/x-icon">
+    <link rel="stylesheet" href="uiop.css" type="text/css">
+   
+    
+    <title>Color changer</title>
+    <style>
+      .g{
+        height: 80px;
+        width: 200px;
+        background-color: black;
+        color: aliceblue;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 19px;
+        border-width: 2px;
+        border:solid;
+        border-radius: 9px;
+        margin-top: 80px;
+        margin-left: 500px;
+        border-color:none;
+        cursor: pointer;
+   
+      }
+      .j{
+        font-family: Arial, Helvetica, sans-serif;
+        height: 80px;
+        width: 200px;
+        background-color: black;
+        border-radius: 5px;
+      }
+      .tag{
+        font-size: 30px;
+        padding: 23px;
+        border-radius: 7px;
+        border-width: 500px;
+        margin-left: 300px;
+        margin-right: 350px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+        color: lightskyblue
+      }
+    </style>
+   
+</head>
+   <body  id='background'>
+
+    <h1 id='title'  class="j">Color Changer</h1>
+    <br>
+    <br>
+    <h2 class="tag" id="tag" >Background Color Rgb (255,255,255)</h2>
+    <button class="g" id='btn'onclick="randomColorGen()" >Press To Change color</button>
+    <script >
+   
+    let background = document.getElementById("background");
+    let tag = document.getElementById("tag");
+    let title = document.getElementById("title");
+    let button=document.getElementById('btn')
+    const colors=[];
+    var arr=[];
+    var realColor;
+    var colorVal;
+    var firstD=Math.round(Math.random()*2);
+    function randomColor (){
+      var secondD;
+      var thirdD;
+      var newColor;
+      let count=0;
+     
+        function firstColor(a){
+        
+             if (a==2){
+              secondD=Math.round(Math.random()*5)
+              thirdD=Math.round(Math.random()*5)
+             }
+             else {
+              secondD=Math.round(Math.random()*9)
+              thirdD=Math.round(Math.random()*9)
+             }
+             
+             function addColor(a,b,c){
+       let q=String(a);
+       let z=String(b);
+       let x=String(c);
+  
+       
+       if(count=1){
+       let newD=q+z+x
+       arr.push(newD)
+       }
+       else if(cont=2){
+        let newD2=q+z+x
+        arr.push(newD2)
+       }
+       else {
+        let newD3=q+z+x
+        arr.push(newD3)
+       }
+      
+        }
+        addColor(firstD,secondD,thirdD)
+      }
+      for(let i=0;i<3;i++){
+        firstD=Math.round(Math.random()*2);
+        count++
+        firstColor((firstD))
+        }
+        realColor=`rgb(${arr})`
+        colorVal=arr
+       arr=[]
+       
+    }
+    
+    function randomColorGen(){
+     randomColor(firstD);
+    let counts=colors.length
+    let randomCol=Math.round(Math.random()*counts)
+    let randomC=colors[randomCol];
+    let final = `rgb(${randomC})`
+    
+    console.log(realColor)
+    
+   
+    background.style.backgroundColor=realColor
+    title.style.color=realColor
+    button.style.color=realColor
+    tag.innerHTML=`Background Color Rgb (${colorVal})`
+    }
+
+    </script>
+   </body>
+
+
+
+</html>

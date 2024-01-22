@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Jesse">
+    <meta name="description" content="Trying not to be a loser">
+    <link rel="icon" href="images/paint.png" type="image/x-icon">
+    <link rel="stylesheet" href="uiop.css" type="text/css">
+   
+    
+    <title>Timer</title>
+    <style>
+        body{
+            background-color: rgb(253, 236, 239)
+        }
+      .j{
+        font-size:60px ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: black;
+        margin-left: 530px;
+        margin-top: 100px;
+      }
+      .g{
+        background-color: rgb(253, 236, 239);
+        border: solid;
+        border-width: 2px;
+        border-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        border-radius: 4px;
+        height: 70px;
+        width: 120px;
+        cursor: pointer;
+        transition:background-color 0.8s,color 0.8s;
+      }
+      .g:hover{
+        background-color: black;
+        color: rgb(253, 236, 239); ;
+      }
+    </style>
+   
+</head>
+   <body  id='background'>
+
+    
+    <br>
+    <br>
+    <h1 class='j' style="font-size: 100px; ;  " mar id="num"></h1>
+     <br>
+    <button style='margin-left: 470px;' class="g" id='btn+'onclick="timer('+')" >Start</button>
+    <button class="g" id='btn-'onclick="timer('-')" >Stop</button>
+    <button class="g" id='btn0'onclick="timer('0')" >Reset</button>
+    <script >
+    const inc=document.getElementById('btn+')
+    const dec=document.getElementById('btn+')
+    const res=document.getElementById('btn+')
+    let miliseconds=0;
+     let seconds =0
+     let minutes=0;
+     let minutes2=0;
+     let counter=`${minutes2}${minutes}:${seconds}${miliseconds}`
+     const screen=document.getElementById('num')
+     let stopped=0;
+    document.getElementById('num').innerHTML=counter
+     let timerid;
+     let stop;
+  let timerplaying=false
+  function timer(a){
+    if(a=="+"){
+        if(timerplaying==false){
+            timerplaying=true
+            console.log(`${minutes2}${minutes}:${seconds}${miliseconds}`,"this is"+screen.innerHTML)
+            timerid=setInterval(()=>{
+        
+          miliseconds++;
+         document.getElementById('num').innerHTML=`${minutes2}${minutes}:${seconds}${miliseconds}`
+         
+          if(miliseconds==9){
+
+            if(seconds==5){
+                if(minutes==9){
+                miliseconds=0
+                seconds=0
+                minutes=0
+                minutes2++;
+                    
+                }
+                else{
+                miliseconds=0
+                seconds=0
+                minutes++;
+                }
+            }
+            else{
+            seconds++
+            miliseconds=0;
+            }
+          }
+          
+            
+          
+            },1000)
+          
+        }
+       
+    }
+    else if(a=="-"){
+        if(timerplaying==true){
+            stopped++;
+         clearInterval(timerid)
+         timerplaying=false
+        }
+      
+    }
+    else if (a=="0"){
+        if(timerplaying==true || stopped==1){
+            stopped=0;
+         clearInterval(timerid)
+         timerplaying=false
+     miliseconds=0;
+      seconds =0
+      minutes=0;
+     minutes2=0;
+     document.getElementById('num').innerHTML=`${minutes2}${minutes}:${seconds}${miliseconds}`
+     console.log(`${minutes2}${minutes}:${seconds}${miliseconds}`,'this is'+screen.innerHTML)
+        
+        }
+       }
+    }
+</script>
+</body>
+</html>

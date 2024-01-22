@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Jesse">
+    <meta name="description" content="Trying not to be a loser">
+    <link rel="icon" href="images/rockpaper.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="uiop.css" type="text/css">
+
+   
+
+    <title>Rock Papaers Scicors</title>
+    <hr>
+  <style>
+    .c{
+        height: 90px;
+        width: 90px;
+    }
+    button{
+        margin: 50px;
+       height: 120px;
+       width: 120px;
+        border: none;
+        background-color: black;
+        border-radius: 50px;
+      
+       
+    }
+    #rock{
+        margin-left: 350px;
+        background-color:black ;
+    }
+    .k{
+        margin-left: 500px;
+    }
+    
+    .j{
+        color: lightskyblue;
+        background-color: black;
+        height: 60px;
+        width: 300px;
+        padding-top: 10px;
+        border-radius: 9px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+        background-color:aliceblue;
+    }
+    .c{
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        background-color: transparent;
+       
+    }
+    .comp{
+        font-family: Arial, Helvetica, sans-serif;
+       margin-left: 500px;
+       color: black;
+       font-weight: bold;
+    }
+.reset{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color:aliceblue;
+    height: 60px;
+    width: 100px;
+   color: black;
+   border-color: black;
+   border: solid;
+   border-width: 2px;
+    padding: 10px;
+    border-radius: 3px;
+}
+#sr{
+    margin-left: 560px;
+    text-align: center;
+    height: 90px;
+    width: 149px;
+    border-width: 3px;
+    color: white;
+    border-radius: 100px;
+    border-style: solid;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  </style>
+</head>
+   <body  >
+
+    <h1 class="j">Rock Paper scissors</h1>
+    
+    <button id="rock" onclick="jankenn('rock')"><img type=image src="images/rock.icon.png" class='c'></button>
+    <button id="paper" onclick="jankenn('paper')"><img type=image src="images/paper2.icon.png" class='c'></button>
+    <button id="scissors" onclick="jankenn('scissors')"><img type=image src="images/scissorsicon.png" class='c'></button>
+   
+        <h1 class="k" id="state" ></h1>  
+    <h2  id="sr" style="font-size: 40px; padding-top: 60px;"></h2>
+    </h5>
+    <h1 class="comp">P1<img type="image" id='img2'  src="images/laffy.png">Vs <img type="image" id='img'  src="images/borman.jpg">Bot
+
+    <button class='reset' style="margin-right: 0px;" onclick="jankenn('reset')">Reset Score</button>
+    <button class='reset' style="margin-left: 3px;" onclick="jankenn('autoplay')">Auto</button>
+    
+    <script src="ty.js" type="text/javascript"></script>
+   </body>
+
+
+
+</html>

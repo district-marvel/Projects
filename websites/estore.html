@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Jesse">
+    <meta name="description" content="Trying not to be a loser">
+    <link rel="icon" href="images/bags.png" type="image/x-icon">
+    <link rel="stylesheet" href="uiop.css" type="text/css">
+   
+    
+    <title>E Store</title>
+   
+</head>
+   <body  style="background-color: rgb(004, 001, 198)">
+
+    <h1>E grocery store</h1>
+
+    <h5>Milk:$7 <button onclick="price('milk')">  Add  </button ></h5>
+    <h5>Apples:$5 <button onclick="price('Apples')">  Add  </button ></h5>
+    <h5>Chicken Wings:$15 <button onclick="price('ChikenWings')">  Add  </button></h5>
+    <h5>Chocolate:$2 <button  onclick="price('chocolate')" >  Add  </bun></h5>
+    <h5>Chips:$4 <button onclick="price('Chips')">  Add  </button></h5>
+    <h5>Mayo:$8 <button onclick="price('Mayo')">  Add  </button></h5>
+    <h5>Check Total <button onclick="cartTotal()">check Total </button></h5>
+    <h5>Check Total <button onclick=" cart=0">  reset cart </button></h5>
+    <h1>Total
+        <p id="cart"></p>
+    </h1>
+   
+    <script>
+        groceries={
+            milk:7,
+            chocolate:2,
+            Chips:4,
+            Mayo:8,
+            ChikenWings:15,
+            Apples:5,
+        }
+        let cart=0;
+        function price(a){
+            cart+=groceries[a]
+            console.log(cart)
+           
+
+        }
+       
+        function cartTotal(){
+            let priceTag=('$'+cart)
+            
+            document.getElementById('cart').innerHTML=priceTag
+            
+
+        }
+    </script>
+   
+   </body>
+
+
+
+</html>

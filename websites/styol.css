@@ -1,0 +1,75 @@
+html {
+    font-size: large;
+  
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-weight: bold;
+        background-color:rgb(27, 30, 55);
+        color: white;
+        
+    }
+.logo{
+
+    height: 50px;
+    width: 50px;
+}
+    .image{
+        height: 144px;
+        cursor: pointer;
+        width:256px
+    }
+
+
+    .aboutRick{
+        font-size: 14px;
+        font-weight:lighter;
+        color: grey;
+    }
+    .Subscribe-button {
+        background-color: red;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        height: 40px;
+        width: 80px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: opacity 0.15s;
+    }
+    .Subscribe-button:hover{
+        opacity: 0.5;
+    }
+    .Join-button {
+        background-color: white;
+        height: 40px;
+        width: 70px;
+        border-color: rgb(29, 157, 249);
+        color:rgb(29, 157, 249);
+        cursor: pointer;
+        border-radius: 3px;
+        border-width: 1px;
+        border-style: solid;
+        transition: background-color 0.15s,
+        color 0.15s
+    }
+    .Join-button:hover{
+        background-color: rgb(29, 157, 249);
+        color: white;
+    }
+    .insta-button{
+        background-color: rgb(29, 157, 249);
+        color:white;
+        height: 50px;
+        width: 90px;
+        border-radius: 27px;
+        font-weight: bold;
+        margin-left: 20px;
+        cursor: pointer;
+    border: none;
+    transition:box-shadow 0.15s;
+    }
+    .insta-button:hover{
+        box-shadow: 5px 5px 5px black 0 0 0 0.15;
+    }

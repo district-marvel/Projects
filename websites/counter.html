@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Jesse">
+    <meta name="description" content="Trying not to be a loser">
+    <link rel="icon" href="images/paint.png" type="image/x-icon">
+    <link rel="stylesheet" href="uiop.css" type="text/css">
+   
+    
+    <title>Color changer</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+      .j{
+        font-size:50px ;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: black;
+        margin-left: 500px;
+      }
+      .g{
+        background-color: aliceblue;
+        border: solid;
+        border-width: 2px;
+        border-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        border-radius: 4px;
+        height: 70px;
+        width: 120px;
+      }
+    </style>
+   
+</head>
+   <body  id='background'>
+
+    <h1 id='title'  class="j" style="margin-top: 100px; margin-bottom: 0px;" >Counter</h1>
+    <br>
+    <br>
+    <h1 class='j' style="font-size: 100px; margin-top: 10px; margin-left: 550px;  " mar id="num">0</h1>
+     <br>
+    <button style='margin-left: 400px;' class="g" id='btn+'onclick="numberChan('+')" >Increase</button>
+    <button class="g" id='btn-'onclick="numberChan('-')" >Decrease</button>
+    <button class="g" id='btn0'onclick="numberChan('0')" >Reset</button>
+    <script >
+    const inc=document.getElementById('btn+')
+    const dec=document.getElementById('btn+')
+    const res=document.getElementById('btn+')
+    const  counters =document.getElementById('num')
+     let counter =0
+  function numberChan(a){
+    if(a=="+"){
+        console.log('woring')
+        counter++;
+       counters.innerHTML=counter;
+    }
+    else if(a=="-"){
+        counter--;
+       counters.innerHTML=counter;
+    }
+    else if (a=="0"){
+counter=0
+counters.innerHTML=counter;
+    }
+    
+    if (counter>0){
+       counters.style.color='green'
+    }
+    else if (counter<0){
+       counters.style.color='red'
+    }
+
+    else if (counter==0){
+       counters.style.color='black'
+    }
+    console.log(document.getElementById('num').style.color)
+}
+
+
+  
+  
+    </script>
+   </body>
+
+
+
+</html>

@@ -1,0 +1,85 @@
+
+@font-face{
+    src:url(fonts/Roboto/Roboto-Light.ttf);
+    font-family:'rblight';
+}
+
+
+
+body{
+    background: linear-gradient(aliceblue);
+    background-attachment: fixed;
+}
+
+
+
+button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    border: none;
+    border-radius: 14px;
+}
+#TAT{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 40px;
+    width: 170px;
+    background-color: lightcyan;
+    color: black;
+    border-color: black ;
+    border-width: 2px;
+    border: solid;
+    padding: 19px;
+    border-radius: 6px;
+
+ 
+}
+
+.diff{
+    background-color: grey
+
+}
+.op{
+    background-color: orange;
+}
+.forms{
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: bold;
+}
+.Calc{
+    border-radius: 19px;
+   padding-left: 10px;;
+    border: none;
+    padding: auto
+;
+    
+}
+.back{
+    position: relative;
+    background-color: black;
+    height: 350px;
+    width: 240px;
+    border-radius: 15px;
+    margin-left: 400px;
+}
+
+.screen{
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 10px;
+     padding: none;
+     margin-top: none;
+    background-color: aquamarine;
+    height: 50px;
+    width:220px ;
+  color: black;
+  border-width: 3px;
+  border: solid;
+  border-color: black;
+    border-radius: 4px;
+}

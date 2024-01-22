@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="shojn.css" type="text/css">
+  <link rel="icon" href="images/borman.jpg" type="icon">
+  <title>Superhero or Supervillian</title>
+</head>
+<body>
+    <h1 font="Arial" class="forms">Superhero or Supervillian ?</h1>
+<form action="index.php" method="post" enctype="multipart/form-data">
+    <label for="Email" class="forms">Email</label>
+    <input id="Email" type="email"placeholder="batman@gotham.com" >
+    <br>
+    
+    <label for="Username" class="forms">Username</label>
+    <input  id="Username" placeholder="theRealBatman"type="text"  minlength="6" maxlength="16">
+    <br>
+    
+    <label for="Password"class="forms">Password</label>
+    <input type="password" id="Password"  minlength="6" maxlength="16">
+    <br>
+    <label for="phone" class="forms">Phone</label>
+    <input type="tel" id="phone"  placeholder="1-(330)-530-7972" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> 
+    <br>
+   <label for="superhero" class="forms">superhero</label>
+   <input type="radio" id="superhero" name="group">
+   <label for="supervillian" class="forms">supervillian</label>
+   <input type="radio" id="supervillian" name="group">
+   <br>
+   <label class="forms" for="Icon">Icon</label>
+   <input type="file" id="Icon" accept="image">
+   <br>
+    <input type="submit">
+    <input type="reset">
+
+</form>
+
+</body>
+</html>
